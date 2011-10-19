@@ -1,0 +1,7 @@
+=Lectures-rapide= est un script utilisateur (/user script/) pour faciliter
+l'utilisation de l'interface d'édition de Lodel pour la revue [[http://lectures.revues.org][lectures]].
+
+* Fonctionnalités implémentées
+
+
+* À faire
