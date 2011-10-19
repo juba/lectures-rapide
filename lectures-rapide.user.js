@@ -25,40 +25,46 @@ function addJQuery(callback) {
 
 function main() {
 
-    // Affichage info bas de page
-    $('body').append('<div id="lectures-rapide-info">Lectures-rapide actif</div>');
-    $('style').first().append('<style type="text/css"> #lectures-rapide-info { position:fixed; bottom:0px; right:0px; background-color:rgba(100,0,0,0.8); color:white; padding:4px 8px; border-top-left-radius:6px; font-size: 9px;} </style>');
+    // Prévention conflit jQuery/mootools
+    // http://davidwalsh.name/jquery-mootools
+    jQuery.noConflict();
+    (function($) {
 
-    // Lecture paramètres url
-    var url_params = [], hash;
-    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
-    for(var i = 0; i < hashes.length; i++)
-    {
-        hash = hashes[i].split('=');
-        url_params.push(hash[0]);
-        url_params[hash[0]] = hash[1];
-    }
-    var do_value = url_params['do'];
-    var path = window.location.pathname;
+	// Affichage info bas de page
+	$('body').append('<div id="lectures-rapide-info">Lectures-rapide actif</div>');
+	$('style').first().append('<style type="text/css"> #lectures-rapide-info { position:fixed; bottom:0px; right:0px; background-color:rgba(100,0,0,0.8); color:white; padding:4px 8px; border-top-left-radius:6px; font-size: 9px;} </style>');
+	
+	// Lecture paramètres url
+	var url_params = [], hash;
+	var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+	for(var i = 0; i < hashes.length; i++){
+            hash = hashes[i].split('=');
+            url_params.push(hash[0]);
+            url_params[hash[0]] = hash[1];
+	}
+	var do_value = url_params['do'];
+	var path = window.location.pathname;
+	
+	
+	// Replier la liste des rubriques sur la fenêtre "Déplacer"
+	if (path == '/lodel/edition/index.php' && do_value == 'preparemove') {
+	    $('#move li:not(:has(a))').hide();
+	}
 
+	// Formulaire d'ajout de notice
+	if (path == '/lodel/edition/index.php' && do_value == 'view') {
+	    // @ISBN par défaut
+	    $('#type1').removeAttr('checked');
+	    $('#type2').attr('checked', 'checked');
+	    // Decitre coché par défaut
+	    $('#fournisseur_decitre').attr('checked', 'checked');
+	    // Focus sur 'valeur'
+	    $('#valeur').focus();
+	    
+	}
 
-    // Replier la liste des rubriques sur la fenêtre "Déplacer"
-    if (path == '/lodel/edition/index.php' && do_value == 'preparemove') {
-	$('#move li:not(:has(a))').hide();
-    }
-
-    // Formulaire d'ajout de notice
-    if (path == '/lodel/edition/index.php' && do_value == 'view') {
-	// @ISBN par défaut
-	$('#type1').removeAttr('checked');
-	$('#type2').attr('checked', 'checked');
-	// Decitre coché par défaut
-	$('#fournisseur_decitre').attr('checked', 'checked');
-	// Focus sur 'valeur'
-	$('#valeur').focus();
-
-    }
-
+    })(jQuery);
+    
 }
 
 // load jQuery and execute the main function
