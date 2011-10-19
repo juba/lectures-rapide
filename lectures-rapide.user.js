@@ -70,7 +70,7 @@ function main() {
 	    
 	}
 
-	// Formulaire d'ajout de notice
+	// Page de parcours des rubriques et items
 	if (path == '/lodel/edition/index.php' && typeof(do_value) === "undefined") {
 	    document.getElementById('listEntities').addEventListener("DOMNodeInserted", function(event) {
 		var targ = $(event.target);
