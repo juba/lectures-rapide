@@ -30,9 +30,16 @@ function main() {
     jQuery.noConflict();
     (function($) {
 
+	// Tiré du plugin jQuery reverseOrder
+	$.fn.reverseOrder = function() {
+	    return this.each(function() {
+		$(this).prependTo( $(this).parent() );
+	    });
+	};
+	
 	// Affichage info bas de page
 	$('body').append('<div id="lectures-rapide-info">Lectures-rapide actif</div>');
-	$('style').first().append('<style type="text/css"> #lectures-rapide-info { position:fixed; bottom:0px; right:0px; background-color:rgba(100,0,0,0.8); color:white; padding:4px 8px; border-top-left-radius:6px; font-size: 9px;} </style>');
+	$('style').first().append('<style type="text/css"> #lectures-rapide-info { position:fixed; bottom:0px; right:0px; background-color:rgba(200,0,0,0.7); color:white; padding:4px 8px; border-top-left-radius:6px; font-size: 9px;} </style>');
 	
 	// Lecture paramètres url
 	var url_params = [], hash;
@@ -61,6 +68,14 @@ function main() {
 	    // Focus sur 'valeur'
 	    $('#valeur').focus();
 	    
+	}
+
+	// Formulaire d'ajout de notice
+	if (path == '/lodel/edition/index.php' && typeof(do_value) === "undefined") {
+	    document.getElementById('listEntities').addEventListener("DOMNodeInserted", function(event) {
+		var targ = $(event.target);
+		targ.find('ul li').reverseOrder(); 
+	    });
 	}
 
     })(jQuery);

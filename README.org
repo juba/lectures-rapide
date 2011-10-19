@@ -59,6 +59,10 @@ l'utilisation de l'interface d'édition de Lodel pour la revue [[http://lectures
 
 * Fonctionnalités implémentées
 
+** Parcours du contenu du site
+- les rubriques et notices de second niveau ou inférieur sont affichées en
+  ordre inverse (les plus récents en premier)
+
 ** Création de nouvelle notice
 - Case «Decitre» cochée par défaut
 - Case «ISBN» choisie par défaut
