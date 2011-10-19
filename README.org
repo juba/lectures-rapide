@@ -36,6 +36,25 @@ l'utilisation de l'interface d'édition de Lodel pour la revue [[http://lectures
 
    [[https://github.com/juba/lectures-rapide/raw/master/img/lectures-rapide-info.png]]
 
+** En cas de problème
+
+   Si l'utilisation du script génère des problèmes, il est possible de le
+   désinstaller ou de le désactiver temporairement.
+
+*** Sous Firefox
+
+    Pour désactiver le script, il suffit d'ouvrir le menu de Scriptish en
+    cliquant sur son icône et de décocher la ligne correposndant à /Lectures
+    rapides/ :
+
+    [[https://github.com/juba/lectures-rapide/raw/master/img/desactivation_firefox.png]]
+
+*** Sous Chrome / Chromium
+
+    Sélectionner le menu /Outils → Extensions/, repérer la ligne correspondant
+    à Lectures rapide et cliquer sur /Désactiver/ :
+
+    [[https://github.com/juba/lectures-rapide/raw/master/img/desactivation_chrome.png]]
 
 
 * Fonctionnalités implémentées
