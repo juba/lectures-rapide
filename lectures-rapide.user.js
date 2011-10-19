@@ -5,11 +5,52 @@
 // @namespace      lectures-rapides
 // @author         Julien Barnier
 // @description    Améliorations de l'interface d'édition de Lectures
-// @include        http://lectures.revues.org/lodel/edition/*
-// @run-at         document-end
-// @require        http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js 
+// @match          http://lectures.revues.org/lodel/edition/*
 // ==/UserScript==
 
 
-$('#lodel-globalDesk').append('<div id="lectures-rapide-info">Lectures-rapide est actif</div>');
-$('style').first().append('<style type="text/css"> #lectures-rapide-info { position: fixed; bottom: 0px; right: 0px; background-color: rgba(50,50,50,0.8); color: white; padding: 4px 8px; border-top-left-radius: 6px;} </style>');
+// a function that loads jQuery and calls a callback function when jQuery has finished loading
+// http://stackoverflow.com/questions/2246901/how-can-i-use-jquery-in-greasemonkey-scripts-in-google-chrome
+function addJQuery(callback) {
+  var script = document.createElement("script");
+  script.setAttribute("src", "http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js");
+  script.addEventListener('load', function() {
+    var script = document.createElement("script");
+    script.textContent = "(" + callback.toString() + ")();";
+    document.body.appendChild(script);
+  }, false);
+  document.body.appendChild(script);
+}
+
+
+function main() {
+
+    // Affichage info bas de page
+    $('body').append('<div id="lectures-rapide-info">Lectures-rapide actif</div>');
+    $('style').first().append('<style type="text/css"> #lectures-rapide-info { position:fixed; bottom:0px; right:0px; background-color:rgba(100,0,0,0.8); color:white; padding:4px 8px; border-top-left-radius:6px; font-size: 9px;} </style>');
+
+    // Lecture paramètres url
+    var url_params = [], hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for(var i = 0; i < hashes.length; i++)
+    {
+        hash = hashes[i].split('=');
+        url_params.push(hash[0]);
+        url_params[hash[0]] = hash[1];
+    }
+    var do_value = url_params['do'];
+    var path = window.location.pathname;
+
+    // Replier la liste des rubriques sur la fenêtre "Déplacer"
+    if (path == '/lodel/edition/index.php' && do_value == 'preparemove') {
+	$('#move li:not(:has(a))').hide();
+    }
+
+
+
+}
+
+// load jQuery and execute the main function
+addJQuery(main);
+
+

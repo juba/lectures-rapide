@@ -3,5 +3,7 @@ l'utilisation de l'interface d'édition de Lodel pour la revue [[http://lectures
 
 * Fonctionnalités implémentées
 
+- Seules les rubriques sont affichées dans l'arborescence de la fenêtre «Déplacer»
+
 
 * À faire
