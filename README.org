@@ -67,7 +67,7 @@ l'utilisation de l'interface d'édition de Lodel pour la revue [[http://lectures
 - Case «Decitre» cochée par défaut
 - Case «ISBN» choisie par défaut
 - Focus sur le champ valeur au chargement de la page
-
+- La date de publication insérée par le plugin Decitre est convertie en année
 
 ** Fenêtre «déplacer»
 

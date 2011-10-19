@@ -68,6 +68,19 @@ function main() {
 	    // Focus sur 'valeur'
 	    $('#valeur').focus();
 	    
+	    // Listener pour clic sur "Sélectionner cet élément" dans le plugin Decitre
+	    document.getElementById('resultsContainer').addEventListener("DOMNodeInserted", function(event) {
+		var targ = $(event.target);
+		// 
+		targ.find('input').click(function() {
+
+		    // Date de publication -> Année seule
+		    var datepub = $('#datepublication').val();
+		    datepub = datepub.replace(/\d\d\/\d\d\/(\d\d\d\d)/, "$1");
+		    $('#datepublication').val(datepub);
+ 		});
+	    });
+
 	}
 
 	// Page de parcours des rubriques et items
