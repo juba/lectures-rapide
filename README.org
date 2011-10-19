@@ -3,7 +3,19 @@ l'utilisation de l'interface d'édition de Lodel pour la revue [[http://lectures
 
 * Fonctionnalités implémentées
 
+** Création de nouvelle notice
+- Case «Decitre» cochée par défaut
+- Case «ISBN» choisie par défaut
+- Focus sur le champ valeur au chargement de la page
+
+
+** Fenêtre «déplacer»
+
 - Seules les rubriques sont affichées dans l'arborescence de la fenêtre «Déplacer»
 
 
 * À faire
+
+** Création de nouvelle notice
+   - Lancer la recherche du plugin d'enreichissement sur appui sur =Entrée=
+     dans le champ =@valeur=

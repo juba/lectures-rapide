@@ -41,12 +41,23 @@ function main() {
     var do_value = url_params['do'];
     var path = window.location.pathname;
 
+
     // Replier la liste des rubriques sur la fenêtre "Déplacer"
     if (path == '/lodel/edition/index.php' && do_value == 'preparemove') {
 	$('#move li:not(:has(a))').hide();
     }
 
+    // Formulaire d'ajout de notice
+    if (path == '/lodel/edition/index.php' && do_value == 'view') {
+	// @ISBN par défaut
+	$('#type1').removeAttr('checked');
+	$('#type2').attr('checked', 'checked');
+	// Decitre coché par défaut
+	$('#fournisseur_decitre').attr('checked', 'checked');
+	// Focus sur 'valeur'
+	$('#valeur').focus();
 
+    }
 
 }
 
