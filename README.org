@@ -1,6 +1,43 @@
 =Lectures-rapide= est un script utilisateur (/user script/) pour faciliter
 l'utilisation de l'interface d'édition de Lodel pour la revue [[http://lectures.revues.org][lectures]].
 
+* Installation
+
+  =lectures-rapide= ne fonctionne que sous Firefox et Chrome/Chromium.
+
+** Installation sous Firefox
+
+   Avant d'installer le script il est nécessaire d'installer l'extension
+   /scriptish/ en cliquant sur le bouton /Ajouter à Firefox/ de la page
+   suivante :
+
+   [[https://addons.mozilla.org/fr/firefox/addon/scriptish/]]
+
+   Une fois l'extension installée, il faut redémarrer Firefox, puis il suffit
+   de visiter l'adresse suivante pour lancer l'installation du script :
+
+   [[https://github.com/juba/lectures-rapide/raw/master/lectures-rapide.user.js]]
+
+** Installation sous Chrome / Chromium
+
+   Pour installer le script sous Chrome ou Chromium, il suffit de visiter
+   l'adresse suivante :
+
+   [[https://github.com/juba/lectures-rapide/raw/master/lectures-rapide.user.js]]
+
+** Vérifier que l'installation s'est bien déroulée
+
+   Il suffit de se connecter à l'interface d'édition de Lectures :
+
+   [[http://lectures.revues.org/lodel/edition/]]
+
+   Un message «Lectures-rapide est actif» doit être affiché en bas à droite de
+   la fenêtre du navigateur :
+
+   [[https://github.com/juba/lectures-rapide/raw/master/img/lectures-rapide-info.png]]
+
+
+
 * Fonctionnalités implémentées
 
 ** Création de nouvelle notice
