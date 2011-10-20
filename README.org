@@ -65,6 +65,8 @@ l'utilisation de l'interface d'édition de Lodel pour la revue [[http://lectures
    - Les items de la rubrique «Rédacteurs» sont classés par ordre alphabétique
 
 *** Création de nouvelle notice
+- Lorsqu'une URL de couverture est présente, celle-ci est ouverte
+  automatiquement lors de la sélection de la notice.
 - Le champ «URL Decitre» est automatiquement renseigné depuis le plugin
 - Case «Decitre» cochée par défaut
 - Case «ISBN» choisie par défaut
@@ -81,7 +83,6 @@ l'utilisation de l'interface d'édition de Lodel pour la revue [[http://lectures
 *** Création de nouvelle notice
     - Lancer la recherche du plugin d'enreichissement sur appui sur =Entrée=
       dans le champ =@valeur=
-    - Faciliter la récupération des couvertures
     - Faciliter la saisie dans les champs d'entrées d'index (idée d'une sorte
       de mini moteur de recherche)
 

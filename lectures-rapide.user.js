@@ -97,6 +97,12 @@ function main() {
 			var url_decitre = 'http://www.decitre.fr/livres/index.aspx/' + $('#ean').val();
 			$('#urldecitre').val(url_decitre);
 		    };
+
+		    // Couverture de livres
+		    var url_couv=$('#couverture').val();
+		    if (url_couv != "") {
+			window.open(url_couv,'Télécharger la couverture');  
+		    }
 		    
  		});
 	    });
