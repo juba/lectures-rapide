@@ -80,7 +80,15 @@ function main() {
 	    $('#fournisseur_decitre').attr('checked', 'checked');
 	    // Focus sur 'valeur'
 	    $('#valeur').focus();
-	    
+	    // On soumet le formulaire avec <Entrée> dans le champ valeur
+	    $('#valeur').removeAttr('onkeypress');
+	    $('#valeur').keypress(function(e) {
+		 if ( e.which == 13 ) {
+		     e.preventDefault();
+		     $('#noticebiblio dl input').last().click();
+		 }
+	    });
+
 	    // Listener pour clic sur "Sélectionner cet élément" dans le plugin Decitre
 	    document.getElementById('resultsContainer').addEventListener("DOMNodeInserted", function(event) {
 		var targ = $(event.target);
