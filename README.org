@@ -65,8 +65,8 @@ l'utilisation de l'interface d'édition de Lodel pour la revue [[http://lectures
    - Les items de la rubrique «Rédacteurs» sont classés par ordre alphabétique
 
 *** Création de nouvelle notice
-    - La recherche dans le plugin d'enreichissement se lance sur appui sur
-      =Entrée= dans le champ =@valeur=
+    - Ajout d'un champ avec autocomplétion pour faciliter la saisie dans les
+      champs d'entrées d'index (sorte de mini moteur de recherche)
     - Lorsqu'une URL de couverture est présente, celle-ci est ouverte
       automatiquement lors de la sélection de la notice.
     - Le champ «URL Decitre» est automatiquement renseigné depuis le plugin
@@ -79,7 +79,6 @@ l'utilisation de l'interface d'édition de Lodel pour la revue [[http://lectures
     - L'ordre de tri des items dans la page «Sélectionner/retirer
       des entités» est inversé
 
-
 *** Fenêtre «déplacer»
 
 - Seules les rubriques sont affichées dans l'arborescence de la fenêtre «Déplacer»
@@ -88,8 +87,9 @@ l'utilisation de l'interface d'édition de Lodel pour la revue [[http://lectures
 * À faire
 
 *** Création de nouvelle notice
-    - Faciliter la saisie dans les champs d'entrées d'index (idée d'une sorte
-      de mini moteur de recherche)
+    - La recherche dans le plugin d'enreichissement se lance sur appui sur
+      =Entrée= dans le champ =@valeur= (fonctionne sous Firefox mais pas sous
+      Chrome → désactivé)
 
 
 
