@@ -30,6 +30,14 @@ function main() {
     jQuery.noConflict();
     (function($) {
 
+	 // $.ajax({
+         //      type: 'GET',
+         //      url: "https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js",
+         //      cache: true,
+         //      dataType: 'script',
+	 //      success: function() { return true; },
+         //      data: null
+         // });
 	/*
 	 * jSort - jQury sorting plugin
 	 * http://do-web.com/jsort/overview
@@ -120,7 +128,22 @@ function main() {
  		});
 	    });
 
-	}
+	    // Autocomplétion pour saisie entités
+	    // $('.entrieseditionarea').each(function() {
+	    // 	var type = $(this).attr('id').replace('entries_','');
+	    // 	var input_id = 'saisielibre_' + type;
+	    // 	var input = '<p>Saisie libre : <input type="text" size="30" id="'+input_id+'" /></p>';
+	    // 	$(input).insertBefore($(this));
+	    // 	//$('#'+input_id).autocomplete({ source: ["c++", "java", "php", "coldfusion", "javascript", "asp", "ruby"] });
+	    // });
+
+	    $.getScript("https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js", 
+			function() {
+			    $('#titre').autocomplete({ source: ["c++", "java", "php", "coldfusion", "javascript", "asp", "ruby"] });
+			});
+
+
+	};
 
 	// Page de parcours des rubriques et items
 	if ((path == '/lodel/edition/' || path == '/lodel/edition/index.php') && typeof(do_value) === "undefined") {
