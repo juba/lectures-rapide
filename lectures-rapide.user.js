@@ -52,7 +52,7 @@ function main() {
 	
 	// Affichage info bas de page
 	$('body').append('<div id="lectures-rapide-info">Lectures-rapide actif</div>');
-	$('style').first().append('<style type="text/css"> #lectures-rapide-info { position:fixed; bottom:0px; right:0px; background-color:rgba(200,0,0,0.7); color:white; padding:4px 8px; border-top-left-radius:6px; font-size: 9px;} </style>');
+	$('head').append('<style type="text/css"> #lectures-rapide-info { position:fixed; bottom:0px; right:0px; background-color:rgba(200,0,0,0.7); color:white; padding:4px 8px; border-top-left-radius:6px; font-size: 9px;} </style>');
 	
 	// Lecture paramètres url
 	var url_params = [], hash;
@@ -69,6 +69,11 @@ function main() {
 	// Replier la liste des rubriques sur la fenêtre "Déplacer"
 	if (path == '/lodel/edition/index.php' && do_value == 'preparemove') {
 	    $('#move li:not(:has(a))').hide();
+	}
+
+	// Replier la liste des rubriques sur la fenêtre "Déplacer"
+	if (path == '/lodel/edition/entitybrowser.php') {
+		$('.listentities .listentities .listentities li').reverseOrder(); 
 	}
 
 	// Formulaire d'ajout de notice

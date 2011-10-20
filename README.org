@@ -75,6 +75,11 @@ l'utilisation de l'interface d'édition de Lodel pour la revue [[http://lectures
     - Focus sur le champ valeur au chargement de la page
     - La date de publication insérée par le plugin Decitre est convertie en année
 
+*** Création de CR
+    - L'ordre de tri des items dans la page «Sélectionner/retirer
+      des entités» est inversé
+
+
 *** Fenêtre «déplacer»
 
 - Seules les rubriques sont affichées dans l'arborescence de la fenêtre «Déplacer»
@@ -86,9 +91,6 @@ l'utilisation de l'interface d'édition de Lodel pour la revue [[http://lectures
     - Faciliter la saisie dans les champs d'entrées d'index (idée d'une sorte
       de mini moteur de recherche)
 
-*** Création de CR
-    - Inverser l'ordre de tri des documents dans la page «Sélectionner/retirer
-      des entités»
 
 
       
