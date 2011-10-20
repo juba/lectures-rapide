@@ -73,7 +73,7 @@ function main() {
 
 	// Replier la liste des rubriques sur la fenêtre "Déplacer"
 	if (path == '/lodel/edition/entitybrowser.php') {
-		$('.listentities .listentities .listentities li').reverseOrder(); 
+		$('.listentities .listentities li').reverseOrder(); 
 	}
 
 	// Formulaire d'ajout de notice
