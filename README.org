@@ -36,7 +36,7 @@ l'utilisation de l'interface d'édition de Lodel pour la revue [[http://lectures
 
    [[https://github.com/juba/lectures-rapide/raw/master/img/lectures-rapide-info.png]]
 
-** En cas de problème
+* En cas de problème
 
    Si l'utilisation du script génère des problèmes, il est possible de le
    désinstaller ou de le désactiver temporairement.
