@@ -78,6 +78,13 @@ function main() {
 		    var datepub = $('#datepublication').val();
 		    datepub = datepub.replace(/\d\d\/\d\d\/(\d\d\d\d)/, "$1");
 		    $('#datepublication').val(datepub);
+
+		    // Ajout URL Decitre
+		    if ($(this).prev().find('img').attr('alt') == "Decitre") {
+			var url_decitre = 'http://www.decitre.fr/livres/index.aspx/' + $('#ean').val();
+			$('#urldecitre').val(url_decitre);
+		    };
+		    
  		});
 	    });
 

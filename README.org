@@ -60,10 +60,11 @@ l'utilisation de l'interface d'édition de Lodel pour la revue [[http://lectures
 * Fonctionnalités implémentées
 
 *** Parcours du contenu du site
-- les rubriques et notices de second niveau ou inférieur sont affichées en
+- Les rubriques et notices de second niveau ou inférieur sont affichées en
   ordre inverse (les plus récents en premier)
 
 *** Création de nouvelle notice
+- Le champ «URL Decitre» est automaitquement renseigné depuis le plugin
 - Case «Decitre» cochée par défaut
 - Case «ISBN» choisie par défaut
 - Focus sur le champ valeur au chargement de la page
