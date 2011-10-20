@@ -60,8 +60,9 @@ l'utilisation de l'interface d'édition de Lodel pour la revue [[http://lectures
 * Fonctionnalités implémentées
 
 *** Parcours du contenu du site
-- Les rubriques et notices de second niveau ou inférieur sont affichées en
-  ordre inverse (les plus récents en premier)
+   - Les rubriques et notices de second niveau ou inférieur sont affichées en
+     ordre inverse (les plus récents en premier)
+   - Les items de la rubrique «Rédacteurs» sont classés par ordre alphabétique
 
 *** Création de nouvelle notice
 - Le champ «URL Decitre» est automatiquement renseigné depuis le plugin
@@ -88,6 +89,5 @@ l'utilisation de l'interface d'édition de Lodel pour la revue [[http://lectures
     - Inverser l'ordre de tri des documents dans la page «Sélectionner/retirer
       des entités»
 
-*** Parcours du contenu du site
-    - Classer les items de la rubrique «Rédacteurs» par ordre alphabétique
+
       
