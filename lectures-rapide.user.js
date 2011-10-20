@@ -23,7 +23,7 @@ function addJQuery(callback) {
 }
 
 
-function main() {
+function main () {
 
     // Prévention conflit jQuery/mootools
     // http://davidwalsh.name/jquery-mootools
@@ -61,6 +61,7 @@ function main() {
 	// Affichage info bas de page
 	$('body').append('<div id="lectures-rapide-info">Lectures-rapide actif</div>');
 	$('head').append('<style type="text/css"> #lectures-rapide-info { position:fixed; bottom:0px; right:0px; background-color:rgba(200,0,0,0.7); color:white; padding:4px 8px; border-top-left-radius:6px; font-size: 9px;} </style>');
+	$('head').append('<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/ui-lightness/jquery-ui.css" />');
 	
 	// Lecture paramètres url
 	var url_params = [], hash;
@@ -94,13 +95,13 @@ function main() {
 	    // Focus sur 'valeur'
 	    $('#valeur').focus();
 	    // On soumet le formulaire avec <Entrée> dans le champ valeur
-	    $('#valeur').removeAttr('onkeypress');
-	    $('#valeur').keypress(function(e) {
-		 if ( e.which == 13 ) {
-		     e.preventDefault();
-		     $('#noticebiblio dl input').last().click();
-		 }
-	    });
+	    // $('#valeur').removeAttr('onkeypress');
+	    // $('#valeur').keypress(function(e) {
+	    //  	 if ( e.which == 13 ) {
+	    //  	     e.preventDefault();
+	    //  	     $('#noticebiblio dl input').last().click();
+	    //  	 }
+	    // });
 
 	    // Listener pour clic sur "Sélectionner cet élément" dans le plugin Decitre
 	    document.getElementById('resultsContainer').addEventListener("DOMNodeInserted", function(event) {
@@ -129,19 +130,45 @@ function main() {
 	    });
 
 	    // Autocomplétion pour saisie entités
-	    // $('.entrieseditionarea').each(function() {
-	    // 	var type = $(this).attr('id').replace('entries_','');
-	    // 	var input_id = 'saisielibre_' + type;
-	    // 	var input = '<p>Saisie libre : <input type="text" size="30" id="'+input_id+'" /></p>';
-	    // 	$(input).insertBefore($(this));
-	    // 	//$('#'+input_id).autocomplete({ source: ["c++", "java", "php", "coldfusion", "javascript", "asp", "ruby"] });
-	    // });
-
+	    
+	    // Chargement jquery-ui
 	    $.getScript("https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js", 
 			function() {
-			    $('#titre').autocomplete({ source: ["c++", "java", "php", "coldfusion", "javascript", "asp", "ruby"] });
+			    // Pour chaque zone de sélection multiple
+			    $('.entrieseditionarea').each(function() {
+	     			var type = $(this).attr('id').replace('entries_','');
+				// insertion input recherche
+	     			var input_id = 'saisielibre_' + type;
+	     			var input_elem = '<p>Recherche : <input type="text" size="30" id="'+input_id+'" /></p>';
+	     			$(input_elem).insertBefore($(this));
+				var input = $('#'+input_id);
+				// création liste valeurs pour autocomplétion
+				var source = []
+				$('#pool_candidats_'+type).find('option').each(function() { source.push($(this).text()) });
+	     			input.autocomplete({ source: source });
+				// touche entrée
+				input.keypress(function(e) {
+				    if ( e.which == 13 ) {
+					e.preventDefault();
+					var str = $(this).val();
+					// si la valeur saisie est dans les valeurs possibles
+					if ($.inArray(str, source) == -1) {
+					    alert("La valeur '"+str+"' n'existe pas.\nUtilisez le bouton 'Ajouter' si vous voulez la créer.");
+					} else {
+					    var membres = []
+					    $('#pool_member_'+type).find('option').each(function() { membres.push($(this).text()) });
+					    // si la valeur saisie a déjà été ajoutée
+					    if ($.inArray(str, membres) == -1) {
+						$('#pool_member_'+type).append('<option value="'+str+'">'+str+'</option>');
+						$(this).val('');
+					    } else {
+						alert("'" + str + "' déjà ajouté !");
+					    };
+					};
+				    };
+				});
+			    });
 			});
-
 
 	};
 
