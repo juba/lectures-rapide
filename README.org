@@ -64,7 +64,7 @@ l'utilisation de l'interface d'édition de Lodel pour la revue [[http://lectures
   ordre inverse (les plus récents en premier)
 
 *** Création de nouvelle notice
-- Le champ «URL Decitre» est automaitquement renseigné depuis le plugin
+- Le champ «URL Decitre» est automatiquement renseigné depuis le plugin
 - Case «Decitre» cochée par défaut
 - Case «ISBN» choisie par défaut
 - Focus sur le champ valeur au chargement de la page
@@ -78,5 +78,16 @@ l'utilisation de l'interface d'édition de Lodel pour la revue [[http://lectures
 * À faire
 
 *** Création de nouvelle notice
-   - Lancer la recherche du plugin d'enreichissement sur appui sur =Entrée=
-     dans le champ =@valeur=
+    - Lancer la recherche du plugin d'enreichissement sur appui sur =Entrée=
+      dans le champ =@valeur=
+    - Faciliter la récupération des couvertures
+    - Faciliter la saisie dans les champs d'entrées d'index (idée d'une sorte
+      de mini moteur de recherche)
+
+*** Création de CR
+    - Inverser l'ordre de tri des documents dans la page «Sélectionner/retirer
+      des entités»
+
+*** Parcours du contenu du site
+    - Classer les items de la rubrique «Rédacteurs» par ordre alphabétique
+      
