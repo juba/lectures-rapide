@@ -30,14 +30,6 @@ function main () {
     jQuery.noConflict();
     (function($) {
 
-	 // $.ajax({
-         //      type: 'GET',
-         //      url: "https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js",
-         //      cache: true,
-         //      dataType: 'script',
-	 //      success: function() { return true; },
-         //      data: null
-         // });
 	/*
 	 * jSort - jQury sorting plugin
 	 * http://do-web.com/jsort/overview
