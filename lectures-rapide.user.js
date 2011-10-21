@@ -72,10 +72,10 @@ function main () {
 	    $('#move li:not(:has(a))').hide();
 	}
 
-	// Replier la liste des rubriques sur la fenêtre "Déplacer"
-	if (path == '/lodel/edition/entitybrowser.php') {
-		$('.listentities .listentities li').reverseOrder(); 
-	}
+	// Inverser les items sur la fenêtre "sélectionner/retirer des entités"
+	//if (path == '/lodel/edition/entitybrowser.php') {
+	//	$('.listentities .listentities li').reverseOrder(); 
+	//}
 
 	// Formulaire d'ajout de notice
 	if (path == '/lodel/edition/index.php' && do_value == 'view') {
@@ -172,14 +172,14 @@ function main () {
 		var targ = $(event.target);
 
 		// On inverse l'ordre de tri des entités
-		targ.find('ul li').reverseOrder(); 
+		//targ.find('ul li').reverseOrder(); 
 
 		// On trie les rédacteurs par ordre alphabétique
-		targ.find('#childContainer3344 ul').first().jSort({
-		    sort_by: '.titre_document',
-		    item: 'li',
-		    order: 'asc'
-		});
+		//targ.find('#childContainer3344 ul').first().jSort({
+		//    sort_by: '.titre_document',
+		//    item: 'li',
+		//    order: 'asc'
+		//});
 
 	    });
 
