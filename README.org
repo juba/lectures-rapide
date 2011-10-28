@@ -59,7 +59,9 @@ l'utilisation de l'interface d'édition de Lodel pour la revue [[http://lectures
 
 * Fonctionnalités implémentées
 
-
+*** Parcours du contenu du site
+    - Ajout de liens de navigation interne /Aller au dernier/ et /Aller au
+      premier/ pour les listes d'items particulièrement longues.
 *** Création de nouvelle notice
     - Ajout d'un champ avec autocomplétion pour faciliter la saisie dans les
       champs d'entrées d'index (sorte de mini moteur de recherche)
@@ -79,13 +81,11 @@ l'utilisation de l'interface d'édition de Lodel pour la revue [[http://lectures
 * À faire
 
 *** Création de nouvelle notice
-    - La recherche dans le plugin d'enreichissement se lance sur appui sur
+    - La recherche dans le plugin d'enrichissement se lance sur appui sur
       =Entrée= dans le champ =@valeur= (fonctionne sous Firefox mais pas sous
       Chrome → désactivé)
 
 *** Parcours du contenu du site
-   - Les rubriques et notices de second niveau ou inférieur devraient être affichés en
-     ordre inverse (les plus récents en premier)
    - Les items de la rubrique «Rédacteurs» devraient être classés par ordre alphabétique
 
 *** Création de CR

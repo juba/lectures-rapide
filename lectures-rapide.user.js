@@ -53,6 +53,7 @@ function main () {
 	// Affichage info bas de page
 	$('body').append('<div id="lectures-rapide-info">Lectures-rapide actif</div>');
 	$('head').append('<style type="text/css"> #lectures-rapide-info { position:fixed; bottom:0px; right:0px; background-color:rgba(200,0,0,0.7); color:white; padding:4px 8px; border-top-left-radius:6px; font-size: 9px;} </style>');
+	$('head').append('<style type="text/css"> .lectures-rapide-nav { margin: 8px 0px 2px 55px; font-size: 90%; } .lectures-rapide-nav a {color: #999; } </style>');
 	$('head').append('<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/ui-lightness/jquery-ui.css" />');
 	
 	// Lecture paramètres url
@@ -164,15 +165,30 @@ function main () {
 
 	};
 
+
+	// Fonction d'ajout des liens de navigation premier/dernier
+	$.fn.add_nav_links = function () {
+	    // On inverse l'ordre de tri des entités
+	    return this.each(function() {
+		var items = $(this).find('.line1_entity'); 
+		if (items.length > 5) {
+		    var first_item = items.first();
+		    var last_item = items.last();
+		    var id = last_item.prev().attr('id');
+		    
+		    first_item.parent().prepend('<p class="lectures-rapide-nav"><a href="#'+ id +'" id="prev'+id+'">[Aller au dernier]</a></p>');
+		    last_item.parent().append('<p class="lectures-rapide-nav"><a href="#prev'+ id +'">[Aller au premier]</a></p>');
+		}		   
+	    })
+	};
+
 	// Page de parcours des rubriques et items
 	if ((path == '/lodel/edition/' || path == '/lodel/edition/index.php') && typeof(do_value) === "undefined") {
+	    $('#listEntities').add_nav_links();
 	    
 	    // On monitore l'insertion d'items dans la liste
 	    document.getElementById('listEntities').addEventListener("DOMNodeInserted", function(event) {
-		var targ = $(event.target);
-
-		// On inverse l'ordre de tri des entités
-		//targ.find('ul li').reverseOrder(); 
+		$(event.target).add_nav_links();
 
 		// On trie les rédacteurs par ordre alphabétique
 		//targ.find('#childContainer3344 ul').first().jSort({
