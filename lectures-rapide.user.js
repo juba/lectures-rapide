@@ -52,10 +52,51 @@ function main () {
 	
 	// Affichage info bas de page
 	$('body').append('<div id="lectures-rapide-info">Lectures-rapide actif</div>');
-	$('head').append('<style type="text/css"> #lectures-rapide-info { position:fixed; bottom:0px; right:0px; background-color:rgba(200,0,0,0.7); color:white; padding:4px 8px; border-top-left-radius:6px; font-size: 9px;} </style>');
+	$('head').append('<style type="text/css"> #lectures-rapide-info { position:fixed; bottom:0px; right:0px; background-color:rgba(200,0,0,0.8); color:white; padding:4px 8px; border-top-left-radius:6px; font-size: 9px;} </style>');
 	$('head').append('<style type="text/css"> .lectures-rapide-nav { margin: 8px 0px 2px 55px; font-size: 90%; } .lectures-rapide-nav a {color: #999; } </style>');
 	$('head').append('<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/ui-lightness/jquery-ui.css" />');
-	
+
+	// Affichage popup raccourcis	
+	var str = '<div id="lectures-rapide-shortcuts">';
+	str += '<h2><span class="togg">↑</span> Raccourcis</h2>';
+	str += '<div id="lectures-rapide-shortcuts-content">';
+	str += '<ul>';
+	str += '<li><a href="http://lectures.revues.org/lodel/edition/oochargement.php?idparent=178&idtype=69">Nouveau compte-rendu 2011</a></li>';
+	str += '<li><a href="http://lectures.revues.org/lodel/edition/index.php?do=view&idparent=1437&idtype=98">Nouvelle notice de livre 2011</a></li>';
+	str += '<li><a href="http://lectures.revues.org/lodel/edition/index.php?do=view&idparent=1437&idtype=100">Nouvelle notice de revue 2011</a></li>';
+	str += '<li><a href="http://lectures.revues.org/lodel/edition/index.php?do=view&idparent=1437&idtype=101">Nouvelle notice de DVD 2011</a></li>';
+	str += '<li><a href="http://lectures.revues.org/lodel/edition/oochargement.php?idparent=1438&idtype=68">Nouvelle actualité</a></li>';
+	str += '</ul>';
+	str += '<ul>';
+	str += '<li><a href="http://lectures.revues.org/lodel/edition/index.php?id=1437">Liste des publications reçues en 2011</a></li>';
+	str += '<li><a href="http://lectures.revues.org/lodel/edition/index.php?id=1429">Liste des comptes rendus à paraître</a></li>';
+	str += '</ul>';
+	str += '</div>';
+	str += '</div>';
+	$('body').append(str);
+
+	str = '<style type="text/css">';
+	str += '#lectures-rapide-shortcuts h2 { display: inline; float: right;background-color:rgba(0,0,0,0.8); color:white; padding:4px 8px; margin: 0px;border-top-left-radius:6px; border-top-right-radius: 6px; font-size: 9px; cursor: pointer; z-index: 1000; font-weight: bold;}';
+	str += '#lectures-rapide-shortcuts { position:fixed; bottom:0px; right:130px; padding: 0px; margin: 0px; font-size: 9px; z-index: 1000;}';
+	str += '#lectures-rapide-shortcuts-content { clear: both; padding: 4px 12px 4px 8px; margin: 0px; border-top-left-radius:6px; background-color:rgba(0,0,0,0.8);color: white; }';
+	str += '#lectures-rapide-shortcuts a { color: white; }';
+	str += '#lectures-rapide-shortcuts a:hover { text-decoration: underline; }';
+	str += '#lectures-rapide-shortcuts ul { clear: both; list-style-type: square; padding-left: 20px; line-height: 14px; }';
+	str += '</style>';
+        $('head').append(str);
+
+	var sh_height = $('#lectures-rapide-shortcuts-content').outerHeight();
+	$('#lectures-rapide-shortcuts').css('bottom', -1 * sh_height);
+	$('#lectures-rapide-shortcuts h2').toggle(function() {
+	    $('#lectures-rapide-shortcuts').animate({bottom: '+='+sh_height},200)
+	    $('#lectures-rapide-shortcuts .togg').text('↓');
+	}, function() {
+	    $('#lectures-rapide-shortcuts').animate({bottom: '-='+sh_height},200)
+	    $('#lectures-rapide-shortcuts .togg').text('↑');
+	}
+	);
+
+
 	// Lecture paramètres url
 	var url_params = [], hash;
 	var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
@@ -67,7 +108,7 @@ function main () {
 	var do_value = url_params['do'];
 	var path = window.location.pathname;
 	
-	
+
 	// Replier la liste des rubriques sur la fenêtre "Déplacer"
 	if (path == '/lodel/edition/index.php' && do_value == 'preparemove') {
 	    $('#move li:not(:has(a))').hide();

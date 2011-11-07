@@ -59,6 +59,10 @@ l'utilisation de l'interface d'édition de Lodel pour la revue [[http://lectures
 
 * Fonctionnalités implémentées
 
+*** Raccourcis
+    - Sur toutes les pages, un onglet «Raccourcis» en bas de page permet
+      d'afficher une fenêtre avec une liste de liens fréquemment utilisés (en
+      dur dans le code).
 *** Parcours du contenu du site
     - Ajout de liens de navigation interne /Aller au dernier/ et /Aller au
       premier/ pour les listes d'items particulièrement longues.
