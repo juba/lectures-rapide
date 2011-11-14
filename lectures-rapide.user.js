@@ -107,7 +107,6 @@ function main () {
 	}
 	var do_value = url_params['do'];
 	var path = window.location.pathname;
-	
 
 	// Replier la liste des rubriques sur la fenêtre "Déplacer"
 	if (path == '/lodel/edition/index.php' && do_value == 'preparemove') {
@@ -137,34 +136,8 @@ function main () {
 	    //  	 }
 	    // });
 
-	    // Listener pour clic sur "Sélectionner cet élément" dans le plugin Decitre
-	    document.getElementById('resultsContainer').addEventListener("DOMNodeInserted", function(event) {
-		var targ = $(event.target);
-		// 
-		targ.find('input').click(function() {
-
-		    // Date de publication -> Année seule
-		    var datepub = $('#datepublication').val();
-		    datepub = datepub.replace(/\d\d\/\d\d\/(\d\d\d\d)/, "$1");
-		    $('#datepublication').val(datepub);
-
-		    // Ajout URL Decitre
-		    if ($(this).prev().find('img').attr('alt') == "Decitre") {
-			var url_decitre = 'http://www.decitre.fr/livres/index.aspx/' + $('#ean').val();
-			$('#urldecitre').val(url_decitre);
-		    };
-
-		    // Couverture de livres
-		    var url_couv=$('#couverture').val();
-		    if (url_couv != "") {
-			window.open(url_couv,'Télécharger la couverture');  
-		    }
-		    
- 		});
-	    });
-
 	    // Autocomplétion pour saisie entités
-	    
+
 	    // Chargement jquery-ui
 	    $.getScript("https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js", 
 			function() {
@@ -203,6 +176,32 @@ function main () {
 				});
 			    });
 			});
+
+	    // Listener pour clic sur "Sélectionner cet élément" dans le plugin Decitre
+	    document.getElementById('resultsContainer').addEventListener("DOMNodeInserted", function(event) {
+		var targ = $(event.target);
+		// 
+		targ.find('input').click(function() {
+
+		    // Date de publication -> Année seule
+		    var datepub = $('#datepublication').val();
+		    datepub = datepub.replace(/\d\d\/\d\d\/(\d\d\d\d)/, "$1");
+		    $('#datepublication').val(datepub);
+
+		    // Ajout URL Decitre
+		    if ($(this).prev().find('img').attr('alt') == "Decitre") {
+			var url_decitre = 'http://www.decitre.fr/livres/index.aspx/' + $('#ean').val();
+			$('#urldecitre').val(url_decitre);
+		    };
+
+		    // Couverture de livres
+		    var url_couv=$('#couverture').val();
+		    if (url_couv != "") {
+			window.open(url_couv,'Télécharger la couverture');  
+		    }
+		    
+ 		});
+	    });
 
 	};
 
