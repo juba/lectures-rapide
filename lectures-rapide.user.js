@@ -33,8 +33,7 @@ function main () {
 	/*
 	 * jSort - jQury sorting plugin
 	 * http://do-web.com/jsort/overview
-	 *
-	 * Copyright 2011, Miriam Zusin
+	 *	 * Copyright 2011, Miriam Zusin
 	 * Dual licensed under the MIT or GPL Version 2 licenses.
 	 * http://do-web.com/jsort/license
 	 */
@@ -138,6 +137,34 @@ function main () {
 
 	    // Autocomplétion pour saisie entités
 
+	    // Listener pour clic sur "Sélectionner cet élément" dans le plugin Decitre
+	    
+	    if( $('#resultsContainer').length ) {
+		$('#resultsContainer').bind("DOMNodeInserted", function(event) {
+		    var targ = $(event.target);
+		    targ.find('input').click(function() {
+
+			// Date de publication -> Année seule
+			var datepub = $('#datepublication').val();
+			datepub = datepub.replace(/\d\d\/\d\d\/(\d\d\d\d)/, "$1");
+			$('#datepublication').val(datepub);
+			
+			// Ajout URL Decitre
+			if ($(this).prev().find('img').attr('alt') == "Decitre") {
+			    var url_decitre = 'http://www.decitre.fr/livres/index.aspx/' + $('#ean').val();
+			    $('#urldecitre').val(url_decitre);
+			};
+			
+			// Couverture de livres
+			var url_couv=$('#couverture').val();
+			if (url_couv != "") {
+			    window.open(url_couv,'Télécharger la couverture');  
+			}
+		    
+ 		    });
+		});
+	    };
+
 	    // Chargement jquery-ui
 	    $.getScript("https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js", 
 			function() {
@@ -177,32 +204,6 @@ function main () {
 			    });
 			});
 
-	    // Listener pour clic sur "Sélectionner cet élément" dans le plugin Decitre
-	    document.getElementById('resultsContainer').addEventListener("DOMNodeInserted", function(event) {
-		var targ = $(event.target);
-		// 
-		targ.find('input').click(function() {
-
-		    // Date de publication -> Année seule
-		    var datepub = $('#datepublication').val();
-		    datepub = datepub.replace(/\d\d\/\d\d\/(\d\d\d\d)/, "$1");
-		    $('#datepublication').val(datepub);
-
-		    // Ajout URL Decitre
-		    if ($(this).prev().find('img').attr('alt') == "Decitre") {
-			var url_decitre = 'http://www.decitre.fr/livres/index.aspx/' + $('#ean').val();
-			$('#urldecitre').val(url_decitre);
-		    };
-
-		    // Couverture de livres
-		    var url_couv=$('#couverture').val();
-		    if (url_couv != "") {
-			window.open(url_couv,'Télécharger la couverture');  
-		    }
-		    
- 		});
-	    });
-
 	};
 
 
@@ -227,7 +228,7 @@ function main () {
 	    $('#listEntities').add_nav_links();
 	    
 	    // On monitore l'insertion d'items dans la liste
-	    document.getElementById('listEntities').addEventListener("DOMNodeInserted", function(event) {
+	    $('#listEntities').bind("DOMNodeInserted", function(event) {
 		$(event.target).add_nav_links();
 
 		// On trie les rédacteurs par ordre alphabétique
