@@ -150,10 +150,11 @@ function main () {
 			$('#datepublication').val(datepub);
 			
 			// Ajout URL Decitre
-			if ($(this).prev().find('img').attr('alt') == "Decitre") {
-			    var url_decitre = 'http://www.decitre.fr/livres/index.aspx/' + $('#ean').val();
-			    $('#urldecitre').val(url_decitre);
-			};
+			// PLUS NECESSAIRE depuis la nouvelle version du plugin
+			// if ($(this).prev().find('img').attr('alt') == "Decitre") {
+			//     var url_decitre = 'http://www.decitre.fr/livres/index.aspx/' + $('#ean').val();
+			//     $('#urldecitre').val(url_decitre);
+			// };
 			
 			// Couverture de livres
 			var url_couv=$('#couverture').val();

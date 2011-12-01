@@ -71,7 +71,6 @@ l'utilisation de l'interface d'édition de Lodel pour la revue [[http://lectures
       champs d'entrées d'index (sorte de mini moteur de recherche)
     - Lorsqu'une URL de couverture est présente, celle-ci est ouverte
       automatiquement lors de la sélection de la notice.
-    - Le champ «URL Decitre» est automatiquement renseigné depuis le plugin
     - Case «Decitre» cochée par défaut
     - Case «ISBN» choisie par défaut
     - Focus sur le champ valeur au chargement de la page
