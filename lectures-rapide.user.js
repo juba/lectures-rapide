@@ -53,6 +53,7 @@ function main () {
 	$('body').append('<div id="lectures-rapide-info">Lectures-rapide actif</div>');
 	$('head').append('<style type="text/css"> #lectures-rapide-info { position:fixed; bottom:0px; right:0px; background-color:rgba(200,0,0,0.8); color:white; padding:4px 8px; border-top-left-radius:6px; font-size: 9px;} </style>');
 	$('head').append('<style type="text/css"> .lectures-rapide-nav { margin: 8px 0px 2px 55px; font-size: 90%; } .lectures-rapide-nav a {color: #999; } </style>');
+	$('head').append('<style type="text/css"> #lodel-container input, #lodel-container select { color: #333; } </style>');
 	$('head').append('<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/ui-lightness/jquery-ui.css" />');
 
 	// Affichage popup raccourcis	
