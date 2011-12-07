@@ -173,6 +173,7 @@ function main () {
 			    // Pour chaque zone de sélection multiple
 			    $('.entrieseditionarea').each(function() {
 	     			var type = $(this).attr('id').replace('entries_','');
+				var hidden_input_id = $(this).find('input[id^="entries["]').first().attr('id');
 				// insertion input recherche
 	     			var input_id = 'saisielibre_' + type;
 	     			var input_elem = '<p>Recherche : <input type="text" size="30" id="'+input_id+'" /></p>';
@@ -197,6 +198,7 @@ function main () {
 					    if ($.inArray(str, membres) == -1) {
 						$('#pool_member_'+type).append('<option value="'+str+'">'+str+'</option>');
 						$(this).val('');
+						updatetxt(hidden_input_id, 'pool_member_'+type);
 					    } else {
 						alert("'" + str + "' déjà ajouté !");
 					    };
