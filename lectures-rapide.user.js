@@ -74,15 +74,6 @@ function main () {
 	str += '<li><a href="http://lectures.revues.org/lodel/edition/index.php?id=1429">Liste des comptes rendus à paraître</a></li>';
 	str += '</ul>';
 
-	str += '<ul>';
-	str += '<li><a href="http://lectures.revues.org/lodel/edition/oochargement.php?idparent=178&idtype=69">Nouveau compte-rendu 2011</a></li>';
-	str += '<li><a href="http://lectures.revues.org/lodel/edition/index.php?do=view&idparent=1437&idtype=98">Nouvelle notice de livre 2011</a></li>';
-	str += '<li><a href="http://lectures.revues.org/lodel/edition/index.php?do=view&idparent=1437&idtype=100">Nouvelle notice de revue 2011</a></li>';
-	str += '<li><a href="http://lectures.revues.org/lodel/edition/index.php?do=view&idparent=1437&idtype=101">Nouvelle notice de DVD 2011</a></li>';
-	str += '<li><a href="http://lectures.revues.org/lodel/edition/index.php?id=1437">Liste des publications reçues en 2011</a></li>';
-	str += '</ul>';
-
-
 	str += '</div>';
 	str += '</div>';
 	$('body').append(str);
