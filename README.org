@@ -25,6 +25,14 @@ l'utilisation de l'interface d'édition de Lodel pour la revue [[http://lectures
 
    [[https://github.com/juba/lectures-rapide/raw/master/lectures-rapide.user.js]]
 
+   Les versions récentes de Chrome ont rendu impossibles l'installation
+   directe de ce type d'extension pour raisons de sécurité. Si l'installation
+   ne marche pas, il faut auparavant installer l'extension /Tampermonkey/ :
+
+   https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo
+
+   Puis visiter le lien du scrit ci-dessus.
+
 ** Vérifier que l'installation s'est bien déroulée
 
    Il suffit de se connecter à l'interface d'édition de Lectures :
@@ -55,7 +63,11 @@ l'utilisation de l'interface d'édition de Lodel pour la revue [[http://lectures
     à Lectures rapide et cliquer sur /Désactiver/ :
 
     [[https://github.com/juba/lectures-rapide/raw/master/img/desactivation_chrome.png]]
-
+    
+    si vous avez installé /Tampermonkey/, cliquez sur l'icône de l'extension
+    à droite de votre barre d'adresse puis choisissez /Options/. Vous pouvez
+    alors désactiver ou désinstaller le script.
+    
 
 * Fonctionnalités implémentées
 
