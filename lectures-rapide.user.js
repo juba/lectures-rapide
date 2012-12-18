@@ -1,7 +1,7 @@
 // ==UserScript==
 // @id             lectures-rapide
 // @name           Lectures rapide
-// @version        0.1
+// @version        0.1.1
 // @namespace      lectures-rapides
 // @author         Julien Barnier
 // @description    Améliorations de l'interface d'édition de Lectures
@@ -38,7 +38,7 @@ function main () {
 	 * http://do-web.com/jsort/license
 	 */
  
-	(function($){$.fn.jSort=function(options){var options=$.extend({sort_by:"p",item:"div",order:"asc",is_num:false,sort_by_attr:false,attr_name:""},options);return this.each(function(){var a=this,hndl=a,titles=[],i=0;$(a).find(options.item).each(function(){var a,b=$(this).find(options.sort_by);if(options.sort_by_attr)a=b.attr(options.attr_name).toLowerCase();else a=b.text().toLowerCase();titles.push([a,i]);$(this).attr("rel","sort"+i);i++});a.sortNum=function(a,b){return eval(a[0]-b[0])};a.sortABC=function(a,b){return a[0]>b[0]?1:-1};if(options.is_num)titles.sort(hndl.sortNum);else titles.sort(hndl.sortABC);if(options.order=="desc")if(options.is_num)titles.reverse(hndl.sortNum);else titles.reverse(hndl.sortABC);for(var t=0;t<titles.length;t++){var el=$(hndl).find(options.item+"[rel='sort"+titles[t][1]+"']");$(hndl).append(el)}})}})(jQuery);
+	(function($){$.fn.jSort=function(options){var options=$.extend({sort_by:"p",item:"div",order:"asc",is_num:false,sort_by_attr:false,attr_name:""},options);return this.each(function(){var a=this,hndl=a,titles=[],i=0;$(a).find(options.item).each(function(){var a,b=$(this).find(options.sort_by);if(options.sort_by_attr)a=b.attr(options.attr_name).toLowerCase();else a=b.text().toLowerCase();titles.push([a,i]);$(this).attr("rel","sort"+i);i++;});a.sortNum=function(a,b){return eval(a[0]-b[0]);};a.sortABC=function(a,b){return a[0]>b[0]?1:-1;};if(options.is_num)titles.sort(hndl.sortNum);else titles.sort(hndl.sortABC);if(options.order=="desc")if(options.is_num)titles.reverse(hndl.sortNum);else titles.reverse(hndl.sortABC);for(var t=0;t<titles.length;t++){var el=$(hndl).find(options.item+"[rel='sort"+titles[t][1]+"']");$(hndl).append(el);}});};})(jQuery);
 
 
 
@@ -62,14 +62,23 @@ function main () {
 	str += '<div id="lectures-rapide-shortcuts-content">';
 
 	str += '<ul>';
+	str += '<li><a href="http://lectures.revues.org/lodel/edition/oochargement.php?idparent=10161&idtype=69">Nouveau compte-rendu 2013</a></li>';
+	str += '<li><a href="http://lectures.revues.org/lodel/edition/index.php?do=view&idparent=10166&idtype=98">Nouvelle notice de livre 2013</a></li>';
+	str += '<li><a href="http://lectures.revues.org/lodel/edition/index.php?do=view&idparent=10166&idtype=100">Nouvelle notice de revue 2013</a></li>';
+	str += '<li><a href="http://lectures.revues.org/lodel/edition/index.php?do=view&idparent=10166&idtype=101">Nouvelle notice de DVD 2013</a></li>';
+	str += '</ul>';
+	str += '<ul>';
 	str += '<li><a href="http://lectures.revues.org/lodel/edition/oochargement.php?idparent=7105&idtype=69">Nouveau compte-rendu 2012</a></li>';
 	str += '<li><a href="http://lectures.revues.org/lodel/edition/index.php?do=view&idparent=7110&idtype=98">Nouvelle notice de livre 2012</a></li>';
 	str += '<li><a href="http://lectures.revues.org/lodel/edition/index.php?do=view&idparent=7110&idtype=100">Nouvelle notice de revue 2012</a></li>';
 	str += '<li><a href="http://lectures.revues.org/lodel/edition/index.php?do=view&idparent=7110&idtype=101">Nouvelle notice de DVD 2012</a></li>';
+	str += '</ul>';
+	str += '<ul>';
 	str += '<li><a href="http://lectures.revues.org/lodel/edition/oochargement.php?idparent=1438&idtype=68">Nouvelle actualité</a></li>';
 	str += '<li><a href="http://lectures.revues.org/lodel/edition/index.php?do=view&idparent=3344&idtype=82">Nouvelle notice biographique de rédacteur</a></li>';
 	str += '</ul>';
 	str += '<ul>';
+	str += '<li><a href="http://lectures.revues.org/lodel/edition/index.php?id=10166">Liste des publications reçues en 2013</a></li>';
 	str += '<li><a href="http://lectures.revues.org/lodel/edition/index.php?id=7110">Liste des publications reçues en 2012</a></li>';
 	str += '<li><a href="http://lectures.revues.org/lodel/edition/index.php?id=1429">Liste des comptes rendus à paraître</a></li>';
 	str += '</ul>';
@@ -91,10 +100,10 @@ function main () {
 	var sh_height = $('#lectures-rapide-shortcuts-content').outerHeight();
 	$('#lectures-rapide-shortcuts').css('bottom', -1 * sh_height);
 	$('#lectures-rapide-shortcuts h2').toggle(function() {
-	    $('#lectures-rapide-shortcuts').animate({bottom: '+='+sh_height},200)
+	    $('#lectures-rapide-shortcuts').animate({bottom: '+='+sh_height},200);
 	    $('#lectures-rapide-shortcuts .togg').text('↓');
 	}, function() {
-	    $('#lectures-rapide-shortcuts').animate({bottom: '-='+sh_height},200)
+	    $('#lectures-rapide-shortcuts').animate({bottom: '-='+sh_height},200);
 	    $('#lectures-rapide-shortcuts .togg').text('↑');
 	}
 	);
@@ -183,8 +192,8 @@ function main () {
 	     			$(input_elem).insertBefore($(this));
 				var input = $('#'+input_id);
 				// création liste valeurs pour autocomplétion
-				var source = []
-				$('#pool_candidats_'+type).find('option').each(function() { source.push($(this).text()) });
+				var source = [];
+				$('#pool_candidats_'+type).find('option').each(function() { source.push($(this).text()); });
 	     			input.autocomplete({ source: source });
 				// touche entrée
 				input.keypress(function(e) {
@@ -195,8 +204,8 @@ function main () {
 					if ($.inArray(str, source) == -1) {
 					    alert("La valeur '"+str+"' n'existe pas.\nUtilisez le bouton 'Ajouter' si vous voulez la créer.");
 					} else {
-					    var membres = []
-					    $('#pool_member_'+type).find('option').each(function() { membres.push($(this).text()) });
+					    var membres = [];
+					    $('#pool_member_'+type).find('option').each(function() { membres.push($(this).text()); });
 					    // si la valeur saisie a déjà été ajoutée
 					    if ($.inArray(str, membres) == -1) {
 						$('#pool_member_'+type).append('<option value="'+str+'">'+str+'</option>');
@@ -227,7 +236,7 @@ function main () {
 		    first_item.parent().prepend('<p class="lectures-rapide-nav"><a href="#'+ id +'" id="prev'+id+'">[Aller au dernier]</a></p>');
 		    last_item.parent().append('<p class="lectures-rapide-nav"><a href="#prev'+ id +'">[Aller au premier]</a></p>');
 		}		   
-	    })
+	    });
 	};
 
 	// Page de parcours des rubriques et items
