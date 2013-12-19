@@ -78,7 +78,6 @@ function main () {
 	str += '<li><a href="http://lectures.revues.org/lodel/edition/index.php?do=view&idparent=3344&idtype=82">Nouvelle notice biographique de rédacteur</a></li>';
 	str += '</ul>';
 	str += '<ul>';
-	str += '<li><a href="">Liste des publications reçues en 2014</a></li>';
 	str += '<li><a href="http://lectures.revues.org/lodel/edition/index.php?id=13060">Liste des publications reçues en 2014</a></li>';
 	str += '<li><a href="http://lectures.revues.org/lodel/edition/index.php?id=10166">Liste des publications reçues en 2013</a></li>';
 	str += '<li><a href="http://lectures.revues.org/lodel/edition/index.php?id=1429">Liste des comptes rendus à paraître</a></li>';
