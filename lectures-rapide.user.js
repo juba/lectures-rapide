@@ -1,7 +1,7 @@
 // ==UserScript==
 // @id             lectures-rapide
 // @name           Lectures rapide
-// @version        0.1.1
+// @version        0.1.2
 // @namespace      lectures-rapides
 // @author         Julien Barnier
 // @description    Améliorations de l'interface d'édition de Lectures
