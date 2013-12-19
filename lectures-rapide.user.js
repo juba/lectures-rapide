@@ -60,7 +60,13 @@ function main () {
 	var str = '<div id="lectures-rapide-shortcuts">';
 	str += '<h2><span class="togg">↑</span> Raccourcis</h2>';
 	str += '<div id="lectures-rapide-shortcuts-content">';
-
+	str += '<ul>';
+	str += '<li><a href="http://lectures.revues.org/lodel/edition/oochargement.php?idparent=13055&idtype=69">Nouveau compte-rendu 2014</a></li>';
+	str += '<li><a href="http://lectures.revues.org/lodel/edition/oochargement.php?idparent=13054&idtype=70">Nouvelle note critique 2014</a></li>';
+	str += '<li><a href="http://lectures.revues.org/lodel/edition/index.php?do=view&idparent=13056&idtype=98">Nouvelle notice de livre 2014</a></li>';
+	str += '<li><a href="http://lectures.revues.org/lodel/edition/index.php?do=view&idparent=13057&idtype=100">Nouvelle notice de revue 2014</a></li>';
+	str += '<li><a href="http://lectures.revues.org/lodel/edition/index.php?do=view&idparent=13059&idtype=101">Nouvelle notice de DVD 2014</a></li>';
+	str += '</ul>';
 	str += '<ul>';
 	str += '<li><a href="http://lectures.revues.org/lodel/edition/oochargement.php?idparent=10161&idtype=69">Nouveau compte-rendu 2013</a></li>';
 	str += '<li><a href="http://lectures.revues.org/lodel/edition/index.php?do=view&idparent=10166&idtype=98">Nouvelle notice de livre 2013</a></li>';
@@ -68,18 +74,13 @@ function main () {
 	str += '<li><a href="http://lectures.revues.org/lodel/edition/index.php?do=view&idparent=10166&idtype=101">Nouvelle notice de DVD 2013</a></li>';
 	str += '</ul>';
 	str += '<ul>';
-	str += '<li><a href="http://lectures.revues.org/lodel/edition/oochargement.php?idparent=7105&idtype=69">Nouveau compte-rendu 2012</a></li>';
-	str += '<li><a href="http://lectures.revues.org/lodel/edition/index.php?do=view&idparent=7110&idtype=98">Nouvelle notice de livre 2012</a></li>';
-	str += '<li><a href="http://lectures.revues.org/lodel/edition/index.php?do=view&idparent=7110&idtype=100">Nouvelle notice de revue 2012</a></li>';
-	str += '<li><a href="http://lectures.revues.org/lodel/edition/index.php?do=view&idparent=7110&idtype=101">Nouvelle notice de DVD 2012</a></li>';
-	str += '</ul>';
-	str += '<ul>';
 	str += '<li><a href="http://lectures.revues.org/lodel/edition/oochargement.php?idparent=1438&idtype=68">Nouvelle actualité</a></li>';
 	str += '<li><a href="http://lectures.revues.org/lodel/edition/index.php?do=view&idparent=3344&idtype=82">Nouvelle notice biographique de rédacteur</a></li>';
 	str += '</ul>';
 	str += '<ul>';
+	str += '<li><a href="">Liste des publications reçues en 2014</a></li>';
+	str += '<li><a href="http://lectures.revues.org/lodel/edition/index.php?id=13060">Liste des publications reçues en 2014</a></li>';
 	str += '<li><a href="http://lectures.revues.org/lodel/edition/index.php?id=10166">Liste des publications reçues en 2013</a></li>';
-	str += '<li><a href="http://lectures.revues.org/lodel/edition/index.php?id=7110">Liste des publications reçues en 2012</a></li>';
 	str += '<li><a href="http://lectures.revues.org/lodel/edition/index.php?id=1429">Liste des comptes rendus à paraître</a></li>';
 	str += '</ul>';
 
