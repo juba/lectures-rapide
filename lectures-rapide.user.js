@@ -1,7 +1,7 @@
 // ==UserScript==
 // @id             lectures-rapide
 // @name           Lectures rapide
-// @version        0.1.2
+// @version        0.1.3
 // @namespace      lectures-rapides
 // @author         Julien Barnier
 // @description    Améliorations de l'interface d'édition de Lectures
@@ -63,9 +63,9 @@ function main () {
 	str += '<ul>';
 	str += '<li><a href="http://lectures.revues.org/lodel/edition/oochargement.php?idparent=13055&idtype=69">Nouveau compte-rendu 2014</a></li>';
 	str += '<li><a href="http://lectures.revues.org/lodel/edition/oochargement.php?idparent=13054&idtype=70">Nouvelle note critique 2014</a></li>';
-	str += '<li><a href="http://lectures.revues.org/lodel/edition/index.php?do=view&idparent=13056&idtype=98">Nouvelle notice de livre 2014</a></li>';
-	str += '<li><a href="http://lectures.revues.org/lodel/edition/index.php?do=view&idparent=13057&idtype=100">Nouvelle notice de revue 2014</a></li>';
-	str += '<li><a href="http://lectures.revues.org/lodel/edition/index.php?do=view&idparent=13059&idtype=101">Nouvelle notice de DVD 2014</a></li>';
+	str += '<li><a href="http://lectures.revues.org/lodel/edition/index.php?do=view&idparent=13060&idtype=98">Nouvelle notice de livre 2014</a></li>';
+	str += '<li><a href="http://lectures.revues.org/lodel/edition/index.php?do=view&idparent=13060&idtype=100">Nouvelle notice de revue 2014</a></li>';
+	str += '<li><a href="http://lectures.revues.org/lodel/edition/index.php?do=view&idparent=13060&idtype=101">Nouvelle notice de DVD 2014</a></li>';
 	str += '</ul>';
 	str += '<ul>';
 	str += '<li><a href="http://lectures.revues.org/lodel/edition/oochargement.php?idparent=10161&idtype=69">Nouveau compte-rendu 2013</a></li>';
