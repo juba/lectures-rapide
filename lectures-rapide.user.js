@@ -121,9 +121,9 @@ function main () {
 	var path = window.location.pathname;
 
 	// Replier la liste des rubriques sur la fenêtre "Déplacer"
-	if (path == '/lodel/edition/index.php' && do_value == 'preparemove') {
-	    $('#move li:not(:has(a))').hide();
-	}
+	//if (path == '/lodel/edition/index.php' && do_value == 'preparemove') {
+	    //$('#move li:not(:has(a))').hide();
+	//}
 
 	// Inverser les items sur la fenêtre "sélectionner/retirer des entités"
 	//if (path == '/lodel/edition/entitybrowser.php') {
