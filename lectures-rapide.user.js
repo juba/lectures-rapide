@@ -1,19 +1,18 @@
 // ==UserScript==
 // @id             lectures-rapide
 // @name           Lectures rapide
-// @version        0.1.4
+// @version        0.1.5
 // @namespace      lectures-rapides
 // @author         Julien Barnier
 // @description    Améliorations de l'interface d'édition de Lectures
-// @match          http://lectures.revues.org/lodel/edition/*
+// @match          https://lectures.revues.org/lodel/edition/*
 // ==/UserScript==
-
 
 // a function that loads jQuery and calls a callback function when jQuery has finished loading
 // http://stackoverflow.com/questions/2246901/how-can-i-use-jquery-in-greasemonkey-scripts-in-google-chrome
 function addJQuery(callback) {
   var script = document.createElement("script");
-  script.setAttribute("src", "http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js");
+  script.setAttribute("src", "https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js");
   script.addEventListener('load', function() {
     var script = document.createElement("script");
     script.textContent = "(" + callback.toString() + ")();";
@@ -54,34 +53,34 @@ function main () {
 	$('head').append('<style type="text/css"> #lectures-rapide-info { position:fixed; bottom:0px; right:0px; background-color:rgba(200,0,0,0.8); color:white; padding:4px 8px; border-top-left-radius:6px; font-size: 9px;} </style>');
 	$('head').append('<style type="text/css"> .lectures-rapide-nav { margin: 8px 0px 2px 55px; font-size: 90%; } .lectures-rapide-nav a {color: #999; } </style>');
 	$('head').append('<style type="text/css"> #lodel-container input, #lodel-container select { color: #333; } </style>');
-	$('head').append('<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/ui-lightness/jquery-ui.css" />');
+	$('head').append('<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/ui-lightness/jquery-ui.css" />');
 
 	// Affichage popup raccourcis	
 	var str = '<div id="lectures-rapide-shortcuts">';
 	str += '<h2><span class="togg">↑</span> Raccourcis</h2>';
 	str += '<div id="lectures-rapide-shortcuts-content">';
 	str += '<ul>';
-	str += '<li><a href="http://lectures.revues.org/lodel/edition/oochargement.php?idparent=16435&idtype=69">Nouveau compte-rendu 2015</a></li>';
-	str += '<li><a href="http://lectures.revues.org/lodel/edition/oochargement.php?idparent=16434&idtype=70">Nouvelle note critique 2015</a></li>';
-	str += '<li><a href="http://lectures.revues.org/lodel/edition/index.php?do=view&idparent=16440&idtype=98">Nouvelle notice de livre 2015</a></li>';
-	str += '<li><a href="http://lectures.revues.org/lodel/edition/index.php?do=view&idparent=16440&idtype=100">Nouvelle notice de revue 2015</a></li>';
-	str += '<li><a href="http://lectures.revues.org/lodel/edition/index.php?do=view&idparent=16440&idtype=101">Nouvelle notice de DVD 2015</a></li>';
+	str += '<li><a href="https://lectures.revues.org/lodel/edition/oochargement.php?idparent=16435&idtype=69">Nouveau compte-rendu 2015</a></li>';
+	str += '<li><a href="https://lectures.revues.org/lodel/edition/oochargement.php?idparent=16434&idtype=70">Nouvelle note critique 2015</a></li>';
+	str += '<li><a href="https://lectures.revues.org/lodel/edition/index.php?do=view&idparent=16440&idtype=98">Nouvelle notice de livre 2015</a></li>';
+	str += '<li><a href="https://lectures.revues.org/lodel/edition/index.php?do=view&idparent=16440&idtype=100">Nouvelle notice de revue 2015</a></li>';
+	str += '<li><a href="https://lectures.revues.org/lodel/edition/index.php?do=view&idparent=16440&idtype=101">Nouvelle notice de DVD 2015</a></li>';
 	str += '</ul>';
 	str += '<ul>';
-	str += '<li><a href="http://lectures.revues.org/lodel/edition/oochargement.php?idparent=13055&idtype=69">Nouveau compte-rendu 2014</a></li>';
-	str += '<li><a href="http://lectures.revues.org/lodel/edition/oochargement.php?idparent=13054&idtype=70">Nouvelle note critique 2014</a></li>';
-	str += '<li><a href="http://lectures.revues.org/lodel/edition/index.php?do=view&idparent=13060&idtype=98">Nouvelle notice de livre 2014</a></li>';
-	str += '<li><a href="http://lectures.revues.org/lodel/edition/index.php?do=view&idparent=13060&idtype=100">Nouvelle notice de revue 2014</a></li>';
-	str += '<li><a href="http://lectures.revues.org/lodel/edition/index.php?do=view&idparent=13060&idtype=101">Nouvelle notice de DVD 2014</a></li>';
+	str += '<li><a href="https://lectures.revues.org/lodel/edition/oochargement.php?idparent=13055&idtype=69">Nouveau compte-rendu 2014</a></li>';
+	str += '<li><a href="https://lectures.revues.org/lodel/edition/oochargement.php?idparent=13054&idtype=70">Nouvelle note critique 2014</a></li>';
+	str += '<li><a href="https://lectures.revues.org/lodel/edition/index.php?do=view&idparent=13060&idtype=98">Nouvelle notice de livre 2014</a></li>';
+	str += '<li><a href="https://lectures.revues.org/lodel/edition/index.php?do=view&idparent=13060&idtype=100">Nouvelle notice de revue 2014</a></li>';
+	str += '<li><a href="https://lectures.revues.org/lodel/edition/index.php?do=view&idparent=13060&idtype=101">Nouvelle notice de DVD 2014</a></li>';
 	str += '</ul>';
 	str += '<ul>';
-	str += '<li><a href="http://lectures.revues.org/lodel/edition/oochargement.php?idparent=1438&idtype=68">Nouvelle actualité</a></li>';
-	str += '<li><a href="http://lectures.revues.org/lodel/edition/index.php?do=view&idparent=3344&idtype=82">Nouvelle notice biographique de rédacteur</a></li>';
+	str += '<li><a href="https://lectures.revues.org/lodel/edition/oochargement.php?idparent=1438&idtype=68">Nouvelle actualité</a></li>';
+	str += '<li><a href="https://lectures.revues.org/lodel/edition/index.php?do=view&idparent=3344&idtype=82">Nouvelle notice biographique de rédacteur</a></li>';
 	str += '</ul>';
 	str += '<ul>';
-	str += '<li><a href="http://lectures.revues.org/lodel/edition/index.php?id=16440">Liste des publications reçues en 2015</a></li>';
-	str += '<li><a href="http://lectures.revues.org/lodel/edition/index.php?id=13060">Liste des publications reçues en 2014</a></li>';
-	str += '<li><a href="http://lectures.revues.org/lodel/edition/index.php?id=1429">Liste des comptes rendus à paraître</a></li>';
+	str += '<li><a href="https://lectures.revues.org/lodel/edition/index.php?id=16440">Liste des publications reçues en 2015</a></li>';
+	str += '<li><a href="https://lectures.revues.org/lodel/edition/index.php?id=13060">Liste des publications reçues en 2014</a></li>';
+	str += '<li><a href="https://lectures.revues.org/lodel/edition/index.php?id=1429">Liste des comptes rendus à paraître</a></li>';
 	str += '</ul>';
 
 	str += '</div>';
