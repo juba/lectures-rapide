@@ -5,6 +5,7 @@
 // @namespace      lectures-rapides
 // @author         Julien Barnier
 // @description    Améliorations de l'interface d'édition de Lectures
+// @match          https://lectures.revues.org/lodel/edition/*
 // @match          http://lectures.revues.org/lodel/edition/*
 // ==/UserScript==
 
