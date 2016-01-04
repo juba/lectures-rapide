@@ -62,9 +62,9 @@ function main () {
     str += '<ul>';
 	str += '<li><a href="https://lectures.revues.org/lodel/edition/oochargement.php?idparent=19732&idtype=69">Nouveau compte-rendu 2016</a></li>';
 	str += '<li><a href="https://lectures.revues.org/lodel/edition/oochargement.php?idparent=19731&idtype=70">Nouvelle note critique 2016</a></li>';
-	str += '<li><a href="https://lectures.revues.org/lodel/edition/index.php?do=view&idparent=19733&idtype=98">Nouvelle notice de livre 2016</a></li>';
-	str += '<li><a href="https://lectures.revues.org/lodel/edition/index.php?do=view&idparent=19734&idtype=100">Nouvelle notice de revue 2016</a></li>';
-	str += '<li><a href="https://lectures.revues.org/lodel/edition/index.php?do=view&idparent=19736&idtype=101">Nouvelle notice de film 2016</a></li>';
+	str += '<li><a href="https://lectures.revues.org/lodel/edition/index.php?do=view&idparent=19737&idtype=98">Nouvelle notice de livre 2016</a></li>';
+	str += '<li><a href="https://lectures.revues.org/lodel/edition/index.php?do=view&idparent=19737&idtype=100">Nouvelle notice de revue 2016</a></li>';
+	str += '<li><a href="https://lectures.revues.org/lodel/edition/index.php?do=view&idparent=19737&idtype=101">Nouvelle notice de film 2016</a></li>';
 	str += '</ul>';
 	str += '<ul>';
 	str += '<li><a href="https://lectures.revues.org/lodel/edition/oochargement.php?idparent=16435&idtype=69">Nouveau compte-rendu 2015</a></li>';
