@@ -36,7 +36,7 @@ function main () {
 	 * Dual licensed under the MIT or GPL Version 2 licenses.
 	 * http://do-web.com/jsort/license
 	 */
- 
+
 	(function($){$.fn.jSort=function(options){var options=$.extend({sort_by:"p",item:"div",order:"asc",is_num:false,sort_by_attr:false,attr_name:""},options);return this.each(function(){var a=this,hndl=a,titles=[],i=0;$(a).find(options.item).each(function(){var a,b=$(this).find(options.sort_by);if(options.sort_by_attr)a=b.attr(options.attr_name).toLowerCase();else a=b.text().toLowerCase();titles.push([a,i]);$(this).attr("rel","sort"+i);i++;});a.sortNum=function(a,b){return eval(a[0]-b[0]);};a.sortABC=function(a,b){return a[0]>b[0]?1:-1;};if(options.is_num)titles.sort(hndl.sortNum);else titles.sort(hndl.sortABC);if(options.order=="desc")if(options.is_num)titles.reverse(hndl.sortNum);else titles.reverse(hndl.sortABC);for(var t=0;t<titles.length;t++){var el=$(hndl).find(options.item+"[rel='sort"+titles[t][1]+"']");$(hndl).append(el);}});};})(jQuery);
 
 
@@ -47,7 +47,7 @@ function main () {
 		$(this).prependTo( $(this).parent() );
 	    });
 	};
-	
+
 	// Affichage info bas de page
 	$('body').append('<div id="lectures-rapide-info">Lectures-rapide actif</div>');
 	$('head').append('<style type="text/css"> #lectures-rapide-info { position:fixed; bottom:0px; right:0px; background-color:rgba(200,0,0,0.8); color:white; padding:4px 8px; border-top-left-radius:6px; font-size: 9px;} </style>');
@@ -55,31 +55,31 @@ function main () {
 	$('head').append('<style type="text/css"> #lodel-container input, #lodel-container select { color: #333; } </style>');
 	$('head').append('<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/ui-lightness/jquery-ui.css" />');
 
-	// Affichage popup raccourcis	
+	// Affichage popup raccourcis
 	var str = '<div id="lectures-rapide-shortcuts">';
 	str += '<h2><span class="togg">↑</span> Raccourcis</h2>';
 	str += '<div id="lectures-rapide-shortcuts-content">';
+    str += '<ul>';
+	str += '<li><a href="https://lectures.revues.org/lodel/edition/oochargement.php?idparent=19732&idtype=69">Nouveau compte-rendu 2016</a></li>';
+	str += '<li><a href="https://lectures.revues.org/lodel/edition/oochargement.php?idparent=19731&idtype=70">Nouvelle note critique 2016</a></li>';
+	str += '<li><a href="https://lectures.revues.org/lodel/edition/index.php?do=view&idparent=19733&idtype=98">Nouvelle notice de livre 2016</a></li>';
+	str += '<li><a href="https://lectures.revues.org/lodel/edition/index.php?do=view&idparent=19734&idtype=100">Nouvelle notice de revue 2016</a></li>';
+	str += '<li><a href="https://lectures.revues.org/lodel/edition/index.php?do=view&idparent=19736&idtype=101">Nouvelle notice de film 2016</a></li>';
+	str += '</ul>';
 	str += '<ul>';
 	str += '<li><a href="https://lectures.revues.org/lodel/edition/oochargement.php?idparent=16435&idtype=69">Nouveau compte-rendu 2015</a></li>';
 	str += '<li><a href="https://lectures.revues.org/lodel/edition/oochargement.php?idparent=16434&idtype=70">Nouvelle note critique 2015</a></li>';
 	str += '<li><a href="https://lectures.revues.org/lodel/edition/index.php?do=view&idparent=16440&idtype=98">Nouvelle notice de livre 2015</a></li>';
 	str += '<li><a href="https://lectures.revues.org/lodel/edition/index.php?do=view&idparent=16440&idtype=100">Nouvelle notice de revue 2015</a></li>';
-	str += '<li><a href="https://lectures.revues.org/lodel/edition/index.php?do=view&idparent=16440&idtype=101">Nouvelle notice de DVD 2015</a></li>';
-	str += '</ul>';
-	str += '<ul>';
-	str += '<li><a href="https://lectures.revues.org/lodel/edition/oochargement.php?idparent=13055&idtype=69">Nouveau compte-rendu 2014</a></li>';
-	str += '<li><a href="https://lectures.revues.org/lodel/edition/oochargement.php?idparent=13054&idtype=70">Nouvelle note critique 2014</a></li>';
-	str += '<li><a href="https://lectures.revues.org/lodel/edition/index.php?do=view&idparent=13060&idtype=98">Nouvelle notice de livre 2014</a></li>';
-	str += '<li><a href="https://lectures.revues.org/lodel/edition/index.php?do=view&idparent=13060&idtype=100">Nouvelle notice de revue 2014</a></li>';
-	str += '<li><a href="https://lectures.revues.org/lodel/edition/index.php?do=view&idparent=13060&idtype=101">Nouvelle notice de DVD 2014</a></li>';
+	str += '<li><a href="https://lectures.revues.org/lodel/edition/index.php?do=view&idparent=16440&idtype=101">Nouvelle notice de film 2015</a></li>';
 	str += '</ul>';
 	str += '<ul>';
 	str += '<li><a href="https://lectures.revues.org/lodel/edition/oochargement.php?idparent=1438&idtype=68">Nouvelle actualité</a></li>';
 	str += '<li><a href="https://lectures.revues.org/lodel/edition/index.php?do=view&idparent=3344&idtype=82">Nouvelle notice biographique de rédacteur</a></li>';
 	str += '</ul>';
 	str += '<ul>';
+	str += '<li><a href="https://lectures.revues.org/lodel/edition/index.php?id=19737">Liste des publications reçues en 2016</a></li>';
 	str += '<li><a href="https://lectures.revues.org/lodel/edition/index.php?id=16440">Liste des publications reçues en 2015</a></li>';
-	str += '<li><a href="https://lectures.revues.org/lodel/edition/index.php?id=13060">Liste des publications reçues en 2014</a></li>';
 	str += '<li><a href="https://lectures.revues.org/lodel/edition/index.php?id=1429">Liste des comptes rendus à paraître</a></li>';
 	str += '</ul>';
 
@@ -127,7 +127,7 @@ function main () {
 
 	// Inverser les items sur la fenêtre "sélectionner/retirer des entités"
 	//if (path == '/lodel/edition/entitybrowser.php') {
-	//	$('.listentities .listentities li').reverseOrder(); 
+	//	$('.listentities .listentities li').reverseOrder();
 	//}
 
 	// Formulaire d'ajout de notice
@@ -151,7 +151,7 @@ function main () {
 	    // Autocomplétion pour saisie entités
 
 	    // Listener pour clic sur "Sélectionner cet élément" dans le plugin Decitre
-	    
+
 	    if( $('#resultsContainer').length ) {
 		$('#resultsContainer').bind("DOMNodeInserted", function(event) {
 		    var targ = $(event.target);
@@ -161,26 +161,26 @@ function main () {
 			var datepub = $('#datepublication').val();
 			datepub = datepub.replace(/\d\d\/\d\d\/(\d\d\d\d)/, "$1");
 			$('#datepublication').val(datepub);
-			
+
 			// Ajout URL Decitre
 			// PLUS NECESSAIRE depuis la nouvelle version du plugin
 			// if ($(this).prev().find('img').attr('alt') == "Decitre") {
 			//     var url_decitre = 'http://www.decitre.fr/livres/index.aspx/' + $('#ean').val();
 			//     $('#urldecitre').val(url_decitre);
 			// };
-			
+
 			// Couverture de livres
 			var url_couv=$('#couverture').val();
 			if (url_couv != "") {
-			    window.open(url_couv,'Télécharger la couverture');  
+			    window.open(url_couv,'Télécharger la couverture');
 			}
-		    
+
  		    });
 		});
 	    };
 
 	    // Chargement jquery-ui
-	    $.getScript("https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js", 
+	    $.getScript("https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js",
 			function() {
 			    // Pour chaque zone de sélection multiple
 			    $('.entrieseditionarea').each(function() {
@@ -227,22 +227,22 @@ function main () {
 	$.fn.add_nav_links = function () {
 	    // On inverse l'ordre de tri des entités
 	    return this.each(function() {
-		var items = $(this).find('.line1_entity'); 
+		var items = $(this).find('.line1_entity');
 		if (items.length > 5) {
 		    var first_item = items.first();
 		    var last_item = items.last();
 		    var id = last_item.prev().attr('id');
-		    
+
 		    first_item.parent().prepend('<p class="lectures-rapide-nav"><a href="#'+ id +'" id="prev'+id+'">[Aller au dernier]</a></p>');
 		    last_item.parent().append('<p class="lectures-rapide-nav"><a href="#prev'+ id +'">[Aller au premier]</a></p>');
-		}		   
+		}
 	    });
 	};
 
 	// Page de parcours des rubriques et items
 	if ((path == '/lodel/edition/' || path == '/lodel/edition/index.php') && typeof(do_value) === "undefined") {
 	    $('#listEntities').add_nav_links();
-	    
+
 	    // On monitore l'insertion d'items dans la liste
 	    $('#listEntities').bind("DOMNodeInserted", function(event) {
 		$(event.target).add_nav_links();
@@ -256,15 +256,13 @@ function main () {
 
 	    });
 
-	    
+
 
 	}
 
     })(jQuery);
-    
+
 }
 
 // load jQuery and execute the main function
 addJQuery(main);
-
-
