@@ -1,11 +1,13 @@
 // ==UserScript==
 // @id             lectures-rapide
 // @name           Lectures rapide
-// @version        0.1.6
+// @version        0.1.7
 // @namespace      lectures-rapides
 // @author         Julien Barnier
 // @description    Améliorations de l'interface d'édition de Lectures
+// @grant          none
 // @match          https://lectures.revues.org/lodel/edition/*
+// @noframes
 // ==/UserScript==
 
 // a function that loads jQuery and calls a callback function when jQuery has finished loading
