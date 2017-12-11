@@ -62,14 +62,14 @@ function main () {
 	str += '<h2><span class="togg">↑</span> Raccourcis</h2>';
 	str += '<div id="lectures-rapide-shortcuts-content">';
 	str += '<ul>';
-	str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/oochargement.php?idparent=21975&idtype=69">Nouveau compte-rendu 2017</a></li>';
+	str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/oochargement.php?idparent=21975&idtype=69">Nouveau compte rendu 2017</a></li>';
 	str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/oochargement.php?idparent=21974&idtype=70">Nouvelle note critique 2017</a></li>';
 	str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/index.php?do=view&idparent=21980&idtype=98">Nouvelle notice de livre 2017</a></li>';
 	str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/index.php?do=view&idparent=21980&idtype=100">Nouvelle notice de revue 2017</a></li>';
 	str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/index.php?do=view&idparent=21980&idtype=101">Nouvelle notice de film 2017</a></li>';
 	str += '</ul>';
 	str += '<ul>';
-	str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/oochargement.php?idparent=19732&idtype=69">Nouveau compte-rendu 2016</a></li>';
+	str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/oochargement.php?idparent=19732&idtype=69">Nouveau compte rendu 2016</a></li>';
 	str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/oochargement.php?idparent=19731&idtype=70">Nouvelle note critique 2016</a></li>';
 	str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/index.php?do=view&idparent=19737&idtype=98">Nouvelle notice de livre 2016</a></li>';
 	str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/index.php?do=view&idparent=19737&idtype=100">Nouvelle notice de revue 2016</a></li>';
