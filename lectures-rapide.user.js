@@ -6,7 +6,7 @@
 // @author         Julien Barnier
 // @description    Améliorations de l'interface d'édition de Lectures
 // @grant          none
-// @match          https://lectures.revues.org/lodel/edition/*
+// @match          https://journals.openedition.org/lectures/lodel/edition/*
 // @noframes
 // ==/UserScript==
 
@@ -62,27 +62,27 @@ function main () {
 	str += '<h2><span class="togg">↑</span> Raccourcis</h2>';
 	str += '<div id="lectures-rapide-shortcuts-content">';
 	str += '<ul>';
-	str += '<li><a href="https://lectures.revues.org/lodel/edition/oochargement.php?idparent=21975&idtype=69">Nouveau compte-rendu 2017</a></li>';
-	str += '<li><a href="https://lectures.revues.org/lodel/edition/oochargement.php?idparent=21974&idtype=70">Nouvelle note critique 2017</a></li>';
-	str += '<li><a href="https://lectures.revues.org/lodel/edition/index.php?do=view&idparent=21980&idtype=98">Nouvelle notice de livre 2017</a></li>';
-	str += '<li><a href="https://lectures.revues.org/lodel/edition/index.php?do=view&idparent=21980&idtype=100">Nouvelle notice de revue 2017</a></li>';
-	str += '<li><a href="https://lectures.revues.org/lodel/edition/index.php?do=view&idparent=21980&idtype=101">Nouvelle notice de film 2017</a></li>';
+	str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/oochargement.php?idparent=21975&idtype=69">Nouveau compte-rendu 2017</a></li>';
+	str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/oochargement.php?idparent=21974&idtype=70">Nouvelle note critique 2017</a></li>';
+	str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/index.php?do=view&idparent=21980&idtype=98">Nouvelle notice de livre 2017</a></li>';
+	str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/index.php?do=view&idparent=21980&idtype=100">Nouvelle notice de revue 2017</a></li>';
+	str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/index.php?do=view&idparent=21980&idtype=101">Nouvelle notice de film 2017</a></li>';
 	str += '</ul>';
 	str += '<ul>';
-	str += '<li><a href="https://lectures.revues.org/lodel/edition/oochargement.php?idparent=19732&idtype=69">Nouveau compte-rendu 2016</a></li>';
-	str += '<li><a href="https://lectures.revues.org/lodel/edition/oochargement.php?idparent=19731&idtype=70">Nouvelle note critique 2016</a></li>';
-	str += '<li><a href="https://lectures.revues.org/lodel/edition/index.php?do=view&idparent=19737&idtype=98">Nouvelle notice de livre 2016</a></li>';
-	str += '<li><a href="https://lectures.revues.org/lodel/edition/index.php?do=view&idparent=19737&idtype=100">Nouvelle notice de revue 2016</a></li>';
-	str += '<li><a href="https://lectures.revues.org/lodel/edition/index.php?do=view&idparent=19737&idtype=101">Nouvelle notice de film 2016</a></li>';
+	str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/oochargement.php?idparent=19732&idtype=69">Nouveau compte-rendu 2016</a></li>';
+	str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/oochargement.php?idparent=19731&idtype=70">Nouvelle note critique 2016</a></li>';
+	str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/index.php?do=view&idparent=19737&idtype=98">Nouvelle notice de livre 2016</a></li>';
+	str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/index.php?do=view&idparent=19737&idtype=100">Nouvelle notice de revue 2016</a></li>';
+	str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/index.php?do=view&idparent=19737&idtype=101">Nouvelle notice de film 2016</a></li>';
 	str += '</ul>';
 	str += '<ul>';
-	str += '<li><a href="https://lectures.revues.org/lodel/edition/oochargement.php?idparent=1438&idtype=68">Nouvelle actualité</a></li>';
-	str += '<li><a href="https://lectures.revues.org/lodel/edition/index.php?do=view&idparent=3344&idtype=82">Nouvelle notice biographique de rédacteur</a></li>';
+	str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/oochargement.php?idparent=1438&idtype=68">Nouvelle actualité</a></li>';
+	str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/index.php?do=view&idparent=3344&idtype=82">Nouvelle notice biographique de rédacteur</a></li>';
 	str += '</ul>';
 	str += '<ul>';
-	str += '<li><a href="https://lectures.revues.org/lodel/edition/index.php?id=21980">Liste des publications reçues en 2017</a></li>';
-	str += '<li><a href="https://lectures.revues.org/lodel/edition/index.php?id=19737">Liste des publications reçues en 2016</a></li>';
-	str += '<li><a href="https://lectures.revues.org/lodel/edition/index.php?id=1429">Liste des comptes rendus à paraître</a></li>';
+	str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/index.php?id=21980">Liste des publications reçues en 2017</a></li>';
+	str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/index.php?id=19737">Liste des publications reçues en 2016</a></li>';
+	str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/index.php?id=1429">Liste des comptes rendus à paraître</a></li>';
 	str += '</ul>';
 
 	str += '</div>';
