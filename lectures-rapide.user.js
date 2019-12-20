@@ -69,7 +69,6 @@ function main() {
 		str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/index.php?do=view&idparent=39812&idtype=101">Nouvelle notice de film 2020</a></li>';
 		str += '</ul>';
 		str += '<ul>';
-		str += '<ul>';
 		str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/oochargement.php?idparent=29932&idtype=69">Nouveau compte rendu 2019</a></li>';
 		str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/oochargement.php?idparent=29938&idtype=70">Nouvelle note critique 2019</a></li>';
 		str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/index.php?do=view&idparent=29925&idtype=98">Nouvelle notice de livre 2019</a></li>';
