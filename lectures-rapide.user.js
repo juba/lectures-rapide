@@ -60,7 +60,15 @@ function main() {
 		// Affichage popup raccourcis
 		var str = '<div id="lectures-rapide-shortcuts">';
 		str += '<h2><span class="togg">↑</span> Raccourcis</h2>';
-		str += '<div id="lectures-rapide-shortcuts-content">';
+	        str += '<div id="lectures-rapide-shortcuts-content">';
+	    	str += '<ul>';
+		str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/oochargement.php?idparent=39806&idtype=69">Nouveau compte rendu 2020</a></li>';
+		str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/oochargement.php?idparent=39804&idtype=70">Nouvelle note critique 2020</a></li>';
+		str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/index.php?do=view&idparent=39812&idtype=98">Nouvelle notice de livre 2020</a></li>';
+		str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/index.php?do=view&idparent=39812&idtype=100">Nouvelle notice de revue 2020</a></li>';
+		str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/index.php?do=view&idparent=39812&idtype=101">Nouvelle notice de film 2020</a></li>';
+		str += '</ul>';
+		str += '<ul>';
 		str += '<ul>';
 		str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/oochargement.php?idparent=29932&idtype=69">Nouveau compte rendu 2019</a></li>';
 		str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/oochargement.php?idparent=29938&idtype=70">Nouvelle note critique 2019</a></li>';
@@ -69,19 +77,12 @@ function main() {
 		str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/index.php?do=view&idparent=29925&idtype=101">Nouvelle notice de film 2019</a></li>';
 		str += '</ul>';
 		str += '<ul>';
-		str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/oochargement.php?idparent=23969&idtype=69">Nouveau compte rendu 2018</a></li>';
-		str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/oochargement.php?idparent=23968&idtype=70">Nouvelle note critique 2018</a></li>';
-		str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/index.php?do=view&idparent=23974&idtype=98">Nouvelle notice de livre 2018</a></li>';
-		str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/index.php?do=view&idparent=23974&idtype=100">Nouvelle notice de revue 2018</a></li>';
-		str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/index.php?do=view&idparent=23974&idtype=101">Nouvelle notice de film 2018</a></li>';
-		str += '</ul>';
-		str += '<ul>';
 		str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/oochargement.php?idparent=1438&idtype=68">Nouvelle actualité</a></li>';
 		str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/index.php?do=view&idparent=3344&idtype=82">Nouvelle notice biographique de rédacteur</a></li>';
 		str += '</ul>';
-		str += '<ul>';
+	        str += '<ul>';
+    		str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/index.php?id=39812">Liste des publications reçues en 2020</a></li>';
 		str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/index.php?id=29925">Liste des publications reçues en 2019</a></li>';
-		str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/index.php?id=23974">Liste des publications reçues en 2018</a></li>';
 		str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/index.php?id=1429">Liste des comptes rendus à paraître</a></li>';
 		str += '</ul>';
 
