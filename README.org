@@ -34,7 +34,7 @@ l'utilisation de l'interface d'édition de Lodel pour la revue [[http://lectures
 
    Il suffit de se connecter à l'interface d'édition de Lectures :
 
-   [[http://lectures.revues.org/lodel/edition/]]
+   [[https://journals.openedition.org/lectures/lodel/edition/]]
 
    Un message «Lectures-rapide est actif» doit être affiché en bas à droite de
    la fenêtre du navigateur :
