@@ -8,10 +8,10 @@ l'utilisation de l'interface d'édition de Lodel pour la revue [[http://lectures
 ** Installation sous Firefox
 
    Avant d'installer le script il est nécessaire d'installer l'extension
-   /scriptish/ en cliquant sur le bouton /Ajouter à Firefox/ de la page
+   /Violentmonkey/ en cliquant sur le bouton /Ajouter à Firefox/ de la page
    suivante :
 
-   [[https://addons.mozilla.org/fr/firefox/addon/scriptish/]]
+   [[https://addons.mozilla.org/fr/firefox/addon/violentmonkey/]]
 
    Une fois l'extension installée, il faut redémarrer Firefox, puis il suffit
    de visiter l'adresse suivante pour lancer l'installation du script :
