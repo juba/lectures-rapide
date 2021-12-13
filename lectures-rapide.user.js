@@ -1,7 +1,7 @@
 // ==UserScript==
 // @id             lectures-rapide
 // @name           Lectures rapide
-// @version        0.1.15
+// @version        0.1.16
 // @namespace      lectures-rapides
 // @author         Julien Barnier
 // @description    Améliorations de l'interface d'édition de Lectures
@@ -62,18 +62,18 @@ function main() {
 		str += '<h2><span class="togg">↑</span> Raccourcis</h2>';
 		str += '<div id="lectures-rapide-shortcuts-content">';
 		str += '<ul>';
+		str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/oochargement.php?idparent=53159&idtype=69">Nouveau compte rendu 2022</a></li>';
+		str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/oochargement.php?idparent=53157&idtype=70">Nouvelle note critique 2022</a></li>';
+		str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/index.php?do=view&idparent=53164&idtype=98">Nouvelle notice de livre 2022</a></li>';
+		str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/index.php?do=view&idparent=53164&idtype=100">Nouvelle notice de revue 2022</a></li>';
+		str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/index.php?do=view&idparent=53164&idtype=101">Nouvelle notice de film 2022</a></li>';
+		str += '</ul>';
+		str += '<ul>';
 		str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/oochargement.php?idparent=46031&idtype=69">Nouveau compte rendu 2021</a></li>';
 		str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/oochargement.php?idparent=46026&idtype=70">Nouvelle note critique 2021</a></li>';
 		str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/index.php?do=view&idparent=46042&idtype=98">Nouvelle notice de livre 2021</a></li>';
 		str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/index.php?do=view&idparent=46042&idtype=100">Nouvelle notice de revue 2021</a></li>';
 		str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/index.php?do=view&idparent=46042&idtype=101">Nouvelle notice de film 2021</a></li>';
-		str += '</ul>';
-    	str += '<ul>';
-		str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/oochargement.php?idparent=39806&idtype=69">Nouveau compte rendu 2020</a></li>';
-		str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/oochargement.php?idparent=39804&idtype=70">Nouvelle note critique 2020</a></li>';
-		str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/index.php?do=view&idparent=39812&idtype=98">Nouvelle notice de livre 2020</a></li>';
-		str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/index.php?do=view&idparent=39812&idtype=100">Nouvelle notice de revue 2020</a></li>';
-		str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/index.php?do=view&idparent=39812&idtype=101">Nouvelle notice de film 2020</a></li>';
 		str += '</ul>';
 		str += '<ul>';
 		str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/oochargement.php?idparent=1438&idtype=68">Nouvelle actualité</a></li>';
@@ -81,7 +81,7 @@ function main() {
 		str += '</ul>';
 		str += '<ul>';
 		str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/index.php?id=46042">Liste des publications reçues en 2021</a></li>';
-    	str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/index.php?id=39812">Liste des publications reçues en 2020</a></li>';
+		str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/index.php?id=39812">Liste des publications reçues en 2020</a></li>';
 		str += '<li><a href="https://journals.openedition.org/lectures/lodel/edition/index.php?id=1429">Liste des comptes rendus à paraître</a></li>';
 		str += '</ul>';
 
